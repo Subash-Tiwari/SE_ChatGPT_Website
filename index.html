@@ -1,93 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Explore the World | Travel Website</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Wanderlust Travels</title>
+    <style>
+        body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        header { background: url('https://source.unsplash.com/1600x400/?travel,nature') center/cover no-repeat; height: 400px; color: white; display: flex; align-items: center; justify-content: center; font-size: 3em; font-weight: bold; text-shadow: 2px 2px 8px rgba(0,0,0,0.7); }
+        nav { background: #333; padding: 10px 0; display: flex; justify-content: center; }
+        nav a { color: white; text-decoration: none; margin: 0 20px; font-weight: bold; }
+        nav a:hover { color: #f0a500; }
+        .content { padding: 20px; display: grid; gap: 20px; grid-template-columns: 2fr 1fr; }
+        .main { }
+        .main img { width: 100%; border-radius: 8px; }
+        .main video { width: 100%; border-radius: 8px; margin-top: 15px; }
+        .sidebar { background: #f4f4f4; padding: 15px; border-radius: 8px; }
+        .sidebar h3 { margin-top: 0; }
+        .footer { background: #333; color: white; text-align: center; padding: 15px 0; margin-top: 30px; }
+        .dashboard { display: flex; justify-content: space-around; margin: 40px 0; }
+        .dashboard div { background: #eee; padding: 20px; text-align: center; border-radius: 8px; width: 20%; box-shadow: 0 0 10px rgba(0,0,0,0.1); transition: 0.3s; }
+        .dashboard div:hover { background: #f0a500; color: white; transform: translateY(-5px); }
+        button { padding: 10px 20px; background: #f0a500; border: none; border-radius: 5px; cursor: pointer; }
+        button:hover { background: #333; color: white; }
+    </style>
 </head>
-
 <body>
+    <header>Wanderlust Travels</header>
 
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="logo">
-            <a href="#">TravelExplorer</a>
-        </div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#destinations">Destinations</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#destinations">Destinations</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
     </nav>
 
-    <!-- Header Section -->
-    <header id="home">
-        <div class="hero-text">
-            <h1>Discover Your Next Adventure</h1>
-            <p>Your journey begins here</p>
+    <div class="dashboard">
+        <div>
+            <h4>🌍 Explore</h4>
+            <p>Discover hidden gems around the globe.</p>
         </div>
-    </header>
-
-    <!-- Dashboard Section -->
-    <section id="destinations">
-        <div class="dashboard">
-            <h2>Popular Destinations</h2>
-            <div class="destination-cards">
-                <div class="destination-card">
-                    <img src="images/paris.jpg" alt="Paris">
-                    <h3>Paris</h3>
-                    <p>The city of lights and love awaits you.</p>
-                </div>
-                <div class="destination-card">
-                    <img src="images/maldives.jpg" alt="Maldives">
-                    <h3>Maldives</h3>
-                    <p>Relax on pristine beaches and azure waters.</p>
-                </div>
-                <div class="destination-card">
-                    <img src="images/newyork.jpg" alt="New York">
-                    <h3>New York</h3>
-                    <p>Experience the energy of the big city.</p>
-                </div>
-            </div>
+        <div>
+            <h4>🛫 Book Trips</h4>
+            <p>Instant booking for your next adventure.</p>
         </div>
-    </section>
-
-    <!-- Gallery Section -->
-    <section id="gallery">
-        <h2>Travel Gallery</h2>
-        <div class="image-gallery">
-            <img src="images/1.jpg" alt="Travel Image 1">
-            <img src="images/2.jpg" alt="Travel Image 2">
-            <img src="images/3.jpg" alt="Travel Image 3">
-            <img src="images/4.jpg" alt="Travel Image 4">
+        <div>
+            <h4>🧭 Guides</h4>
+            <p>Travel smart with expert tips and guides.</p>
         </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="contact-form">
-            <h2>Contact Us</h2>
-            <form action="#">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
+        <div>
+            <h4>📸 Memories</h4>
+            <p>Capture moments, share with the world.</p>
         </div>
-    </section>
+    </div>
 
-    <!-- Footer Section -->
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2025 TravelExplorer | Designed by YourName</p>
+    <div class="content">
+        <div class="main">
+            <h2>Explore Breathtaking Destinations</h2>
+            <p>Let your next journey begin here! From mountain escapes to beach paradises, we bring the world to your feet.</p>
+            <img src="https://source.unsplash.com/800x400/?travel,beach" alt="Beautiful Destination">
+
+            <h3>Watch Our Travel Highlight Reel</h3>
+            <video controls>
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            <h3>Plan Your Dream Vacation</h3>
+            <p>With flexible packages and unbeatable experiences, your dream trip is just a click away!</p>
+            <button onclick="alert('Booking feature coming soon!')">Book Now</button>
         </div>
-    </footer>
 
-    <script src="script.js"></script>
+        <div class="sidebar">
+            <h3>Travel Tips</h3>
+            <ul>
+                <li>Pack light, but smart.</li>
+                <li>Always keep a copy of your documents.</li>
+                <li>Respect local customs and traditions.</li>
+                <li>Embrace the unexpected!</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; 2025 Wanderlust Travels | Your journey starts here.
+    </div>
+
+    <script>
+        // Simple navigation feedback
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                alert('Navigating to: ' + this.textContent);
+            });
+        });
+    </script>
 </body>
-
 </html>
